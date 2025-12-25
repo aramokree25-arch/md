@@ -1,26 +1,24 @@
 :root{
-  /* ---- Primary palette (matches your logo) ---- */
-  --primary-600: #2E5AA3; /* main blue (links, buttons) */
-  --primary-700: #234783; /* darker hover/active */
-  --primary-100: #E9F1FF; /* light tint for subtle backgrounds */
+  /* ---- Primary ---- */
+  --primary-600: #2E5AA3; 
+  --primary-700: #234783; 
+  --primary-100: #E9F1FF; 
 
-  /* ---- Neutrals ---- */
-  --ink-900: #0f172a;     /* near-black for headings */
-  --ink-700: #334155;     /* body text */
-  --ink-400: #94a3b8;     /* subtle borders */
-  --surface:  #ffffff;    /* page background */
-  --card:     #ffffff;    /* card background */
-  --muted:    #f6f7fb;    /* soft section background */
+  --ink-900: #0f172a;     
+  --ink-700: #334155;     
+  --ink-400: #94a3b8;     
+  --surface:  #ffffff;    
+  --card:     #ffffff;    
+  --muted:    #f6f7fb;    
 
-  /* ---- Accents (from logo greys) ---- */
-  --accent-500: #6B7280;  /* medium grey for UI & icons */
+  
+  --accent-500: #6B7280;  
 
-  /* ---- Layout ---- */
   --radius: 18px;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
   --container: 1400px;
 }
-/* ========== Base ========== */
+
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
 body{
@@ -37,7 +35,7 @@ img{ max-width: 100%; display: block; }
   margin-inline: auto;
 }
 
-/* ========== Header / Banner ========== */
+
 .site-header{
   position: sticky; top: 0; z-index: 50;
   background: #fff;
@@ -93,26 +91,26 @@ img{ max-width: 100%; display: block; }
   transition: transform .2s ease, opacity .2s ease;
 }
 
-/* ========== Hero ========== */
+
 .hero{
   position: relative;
-  min-height: 100vh;                 /* full screen height */
+  min-height: 100vh;                 
   display: flex;
-  align-items: center;                /* centre content vertically */
+  align-items: center;               
   color: #fff;
 
 
 
 
-  /* background image + dark overlay */
+  
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)),
-    url("Assets/imperial-front.jpg");        /* 👈 set this to your campus image */
+    url("Assets/imperial-front.jpg");        
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* this is the “image doesn’t move” effect */
+  
   background-attachment: fixed;
 }
 
@@ -136,7 +134,7 @@ img{ max-width: 100%; display: block; }
 
 
 
-/* Buttons */
+
 .btn{
   display: inline-block;
   padding: .75rem 1.05rem;
@@ -156,7 +154,7 @@ img{ max-width: 100%; display: block; }
 .btn-outline:hover{ border-color: var(--primary-700); color: var(--primary-700); }
 .cta{ display: flex; gap: .75rem; flex-wrap: wrap; }
 
-/* ========== Sections & Cards ========== */
+
 .section{ padding: 56px 0; }
 .section.subtle{ background: var(--muted); }
 h2{ color: var(--ink-900); margin: 0 0 .4rem; }
@@ -186,7 +184,7 @@ h3{ color: var(--ink-900); margin: 0 0 .4rem; font-size: 1.15rem; }
 }
 .text-link:hover{ color: var(--primary-700); text-decoration: underline; }
 
-/* ========== Footer ========== */
+
 .site-footer{
   background: #0f172a;
   color: #cbd5e1;
@@ -256,7 +254,7 @@ padding-top: 0.5
 } 
 
 
-/* ========== Responsive ========== */
+
 @media (max-width: 880px){
   .grid-2{ grid-template-columns: 1fr; }
   .grid-3{ grid-template-columns: 1fr; }
@@ -284,7 +282,7 @@ padding-top: 0.5
   .nav-toggle:checked + .hamburger span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
 }
 
-/* ========== About Section ========== */
+
 .about{
   max-width: 800px;     /* narrower column */
   margin: 0 auto;       /* centres the column inside .container */
@@ -321,16 +319,16 @@ padding-top: 0.5
   background: var(--ink-900);  /* same colour as your headings */
   border-radius: 999px;
 
-  /* small shadow to make the line pop */
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
 }
 
-/* optional: a bit more spacing between paragraphs */
+
 #about p{
   margin-bottom: 1rem;
 }
 
-/* ===== Stats box ===== */
+
 
 .stats-panel{
   max-width: 1000px;
@@ -338,11 +336,11 @@ padding-top: 0.5
   background: #ffffff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 3rem 3rem;         /* 👈 taller box */
+  padding: 3rem 3rem;        
   position: relative;
 }
 
-/* 2x2 layout */
+
 .stats-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -350,10 +348,10 @@ padding-top: 0.5
   column-gap: 3rem;
   row-gap: 2.5rem;
   position: relative;
-  z-index: 1;                 /* sit above the lines */
+  z-index: 1;                 
 }
 
-/* vertical + horizontal lines only (no full grid) */
+
 .stats-panel::before,
 .stats-panel::after{
   content: "";
@@ -362,7 +360,7 @@ padding-top: 0.5
   z-index: 0;
 }
 
-/* vertical line */
+
 .stats-panel::before{
   top: 15%;
   bottom: 15%;
@@ -381,11 +379,11 @@ padding-top: 0.5
 .stat{
   display: flex;
   flex-direction: column;
-  align-items: center;      /* centre horizontally */
-  justify-content: center;  /* centre vertically */
+  align-items: center;      
+  justify-content: center;  
   text-align: center;
-  min-height: 120px;        /* ensures some height in each quadrant */
-}
+  min-height: 120px;      
+  }
 
 .stat-icon{
   font-size: 1.8rem;
@@ -405,7 +403,6 @@ padding-top: 0.5
 }
 
 
-/* responsive – stack on small screens and hide cross lines */
 @media (max-width: 720px){
   .stats-grid{
     grid-template-columns: 1fr;
@@ -417,7 +414,7 @@ padding-top: 0.5
   }
 }
 
-/* ===== Newsletter banner ===== */
+
 
 .newsletter-banner{
   position: relative;
@@ -426,7 +423,7 @@ padding-top: 0.5
   /* your MedTech banner image */
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)),
-    url("Assets/MedTechbn.jpg"); /* 👈 update to your actual banner path */
+    url("Assets/MedTechbn.jpg"); /* 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -441,7 +438,7 @@ padding-top: 0.5
   justify-content: center;
 }
 
-/* blue box on top of the image */
+  
 .newsletter-box{
   max-width: 720px;
   width: 100%;
@@ -500,7 +497,7 @@ padding-top: 0.5
   box-shadow: 0 0 0 3px rgba(248, 250, 252, 0.7);
 }
 
-/* button similar to the example but in your colours */
+
 .newsletter-btn{
   padding: 0.9rem 1.6rem;
   border: none;
@@ -520,7 +517,8 @@ padding-top: 0.5
   color: var(--primary-700);
 }
 
-/* visually hidden label for accessibility */
+
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -533,7 +531,7 @@ padding-top: 0.5
   border: 0;
 }
 
-/* ===== Responsive tweaks ===== */
+
 
 @media (max-width: 720px){
   .newsletter-banner{
@@ -577,14 +575,13 @@ padding-top: 0.5
 }
 
 
-/* ===== MedTech carousel ===== */
-
+ 
 .mt-carousel{
   position: relative;
-  overflow: visible;  /* allow side cards to peek */
+  overflow: visible;  
   padding-block: 0.5rem;
   max-width: 1100px;
-  margin: 0 auto;     /* centre the carousel */
+  margin: 0 auto;     
 }
 
 
@@ -594,12 +591,11 @@ padding-top: 0.5
   transition: transform 0.6s ease;
 }
 
-/* each slide slightly narrower than container so neighbours peek in */
-/* each slide slightly narrower than container so neighbours peek in */
+ 
 .carousel-slide{
-  flex: 0 0 78%;   /* was 70% – makes main card bigger */
+  flex: 0 0 78%;    
   margin: 0 1.25rem;
-  padding: 3rem 3rem 3.2rem;  /* longer / taller cards */
+  padding: 3rem 3rem 3.2rem;  
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.5fr);
   gap: 2rem;
@@ -618,8 +614,7 @@ padding-top: 0.5
 }
 
 
-/* active slide pops */
-.carousel-slide.is-active{
+ .carousel-slide.is-active{
   opacity: 1;
   transform: scale(1);
   box-shadow: 0 24px 55px rgba(15, 23, 42, 0.20);
@@ -659,12 +654,11 @@ padding-top: 0.5
   gap: 1.25rem;
   max-width: 1100px;
   margin-left: auto;
-  margin-right: auto;   /* centre under the carousel */
+  margin-right: auto;   
 }
 
 
-/* arrows now inline, not overlayed */
-.carousel-arrow{
+ .carousel-arrow{
   width: 40px;
   height: 40px;
   border-radius: 999px;
@@ -710,8 +704,7 @@ padding-top: 0.5
   transform: translateY(-1px);
 }
 
-/* responsive tweaks */
-
+ 
 @media (max-width: 880px){
   .carousel-slide{
     grid-template-columns: 1fr;
@@ -742,8 +735,7 @@ padding-top: 0.5
 
 
 
-/* ===== Committee / Team page ===== */
-
+ 
 .team-hero{
   background: var(--muted);
   padding-top: 64px;
@@ -785,8 +777,7 @@ padding-top: 0.5
   color: var(--ink-700);
 }
 
-/* ===== Layout ===== */
-
+ 
 .committee-featured{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -803,8 +794,7 @@ padding-top: 0.5
   padding-top: 2rem;
 }
 
-/* Single member block: no card background, just clean spacing */
-
+ 
 .committee-member{
   display: flex;
   flex-direction: column;
@@ -812,8 +802,7 @@ padding-top: 0.5
   gap: .7rem;
 }
 
-/* Photo */
-
+ 
 .committee-photo-frame{
   width: 220px;
   max-width: 100%;
@@ -830,8 +819,7 @@ padding-top: 0.5
   display: block;
 }
 
-/* Text block */
-
+ 
 .committee-text{
   margin-top: .4rem;
   display: flex;
@@ -891,8 +879,7 @@ padding-top: 0.5
   border-bottom-color: var(--primary-700);
 }
 
-/* ===== Responsive ===== */
-
+ 
 @media (max-width: 900px){
   .committee-featured{
     grid-template-columns: 1fr;
@@ -921,8 +908,7 @@ padding-top: 0.5
 
 
 
-/* ===== Partners page ===== */
-
+ 
 .partners-hero{
   background: var(--muted);
   padding-top: 72px;
@@ -952,8 +938,7 @@ padding-top: 0.5
   flex-wrap: wrap;
 }
 
-/* intro / benefits */
-
+ 
 .partners-intro-grid{
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
@@ -1000,8 +985,7 @@ padding-top: 0.5
   font-size: 1.1rem;
 }
 
-/* tiers */
-
+ 
 .partners-tier-header{
   max-width: 720px;
   margin: 0 auto 2rem;
@@ -1030,13 +1014,12 @@ padding-top: 0.5
   font-size: 0.9rem;
 }
 
-/* partner cards */
-
+ 
 .partner-grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
-  align-items: stretch;            /* make all cards in a row the same height */
+  align-items: stretch;           
 }
 
 
@@ -1081,7 +1064,7 @@ padding-top: 0.5
   display: flex;
   flex-direction: column;
   gap: .3rem;
-  flex: 1;                     /* body fills remaining height */
+  flex: 1;                     
 }
 
 .partner-name{
@@ -1108,7 +1091,7 @@ padding-top: 0.5
   font-weight: 500;
   text-decoration: none;
   color: var(--primary-600);
-  margin-top: auto;            /* pushes the link to the bottom of the card */
+  margin-top: auto;            
 }
 
 .partner-link:hover{
@@ -1184,8 +1167,7 @@ padding-top: 0.5
 
 
 
-/* ===== Committee / Team page ===== */
-
+ 
 .team-hero{
   background: var(--muted);
   padding-top: 64px;
@@ -1258,26 +1240,24 @@ padding-top: 0.5
   color: var(--ink-700);
 }
 
-/* ===== Committee grid ===== */
-
+ 
 .committee-grid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.4rem 2rem;
   margin-top: 1.2rem;
-  align-items: start;           /* make all items align from the top */
+  align-items: start;          
 }
 
 .committee-member{
   display: flex;
   flex-direction: column;
-  align-items: center;          /* centre the block inside its column */
-  text-align: left;             /* but keep the text left-aligned */
+  align-items: center;           
+  text-align: left;              
 }
 
 
-/* no boxes, just photo + text */
-
+ 
 .committee-photo{
   width: 220px;
   max-width: 100%;
@@ -1285,7 +1265,7 @@ padding-top: 0.5
   border-radius: 24px;
   overflow: hidden;
   background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
-  margin: 0 auto 0.7rem;        /* centre photo in its column */
+  margin: 0 auto 0.7rem;      
 }
 
 
@@ -1355,8 +1335,7 @@ padding-top: 0.5
   border-bottom-color: var(--primary-700);
 }
 
-/* ===== Responsive ===== */
-
+ 
 @media (max-width: 960px){
   .committee-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1396,8 +1375,7 @@ padding-top: 0.5
 
 
 
-/* ===== Events page ===== */
-
+ 
 .events-hero{
   background: var(--muted);
   padding-top: 64px;
@@ -1598,8 +1576,7 @@ padding-top: 0.5
   gap: .7rem;
 }
 
-/* empty state (if needed) */
-
+ 
 .events-empty{
   margin-top: 1.6rem;
   text-align: center;
@@ -1720,9 +1697,8 @@ padding-top: 0.5
 .partner-logo img{
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* fills the box, crops if needed */
-  padding: 0;         /* remove inner gap */
-  display: block;
+  object-fit: cover;     
+  padding: 0;          
 }
 
 .event-description1{
@@ -1731,4 +1707,5 @@ padding-top: 0.5
 
 .event-description3{
   padding-bottom: 28px;
+
 }
