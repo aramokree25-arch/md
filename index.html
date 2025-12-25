@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- ===== Global Header / Banner (reuse on every page) ===== -->
+  <!-- ===== Global Header / Banner for every page ===== -->
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand">
@@ -19,14 +19,12 @@
         </span>
       </a>
 
-      <!-- Mobile menu toggle (no JS) -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
       <label for="nav-toggle" class="hamburger" aria-hidden="true">
         <span></span><span></span><span></span>
       </label>
 
       <nav class="main-nav" aria-label="Primary">
-        <!-- Add 'aria-current="page"' on the active page link -->
         <a href="index.html" aria-current="page">Home</a>
         <a href="team.html">Team</a>
         <a href="events.html">Events</a>
@@ -35,7 +33,6 @@
     </div>
   </header>
 
-  <!-- ===== Hero / Intro (Home only) ===== -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
@@ -50,7 +47,7 @@
     </div>
   </section>
 
-  <!-- ===== About (Home only) ===== -->
+  <!-- ===== About ===== -->
 <section id="about" class="section">
   <div class="container">
     <div class="about">
@@ -67,7 +64,7 @@
   </div>
 </section>
 
-<!-- ===== Stats box ===== -->
+<!-- ===== Stats ===== -->
 <section class="section">
   <div class="container">
     <div class="stats-panel">
@@ -139,7 +136,7 @@
 
 
 
-<!-- ===== Carousel (Home only) ===== -->
+<!-- ===== Carousel ===== -->
 <section class="section subtle">
   <div class="container">
     <h2 class="carousel-heading">What we offer</h2>
@@ -227,7 +224,6 @@
 <footer class="site-footer">
   <div class="container footer-grid">
 
-    <!-- Left side: logo + note -->
     <div class="footer-left">
       <div class="footer-brand">
         <img src="Assets/logo.jpg" alt="MedTech Imperial logo small">
@@ -238,7 +234,6 @@
       </p>
     </div>
 
-    <!-- Right side: contact + socials -->
     <div class="footer-right">
       <div class="footer-meta">
         <p class="footer-heading">Contact</p>
@@ -273,10 +268,8 @@
   <meta charset="UTF-8">
   <title>MedTech Imperial</title>
 
-  <!-- Your main stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Font Awesome for icons (see next point) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -284,7 +277,6 @@
 </head>
 
 
-  <!-- Tiny inline script just to set current year; safe to remove if not wanted -->
 <script>
   // footer year
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -363,3 +355,4 @@
 
 </body>
 </html>
+
